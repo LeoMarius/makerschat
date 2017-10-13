@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mon Jitsi intégré</title>
+    <meta name="description" content="Beaucoup de bricolage.">
+    <link rel="stylesheet" href="main.css">
+
+
+
+</head>
+
+<body>
+    <div id="meet"></div>
+
+    <h1>PREMIERS PAS AVEC Jitsi</h1>
+    <h2>On tente des trucs !</h2>
+
+
+    <!--
+    <div id="buttonsBox">
+        <div class="joyBtn btnTop" onclick="pressedButton('top')"></div>
+        <div class="joyBtn btnDown" onclick="pressedButton('down')"></div>
+        <div class="joyBtn btnLeft" onclick="pressedButton('left')"></div>
+        <div class="joyBtn btnRight" onclick="pressedButton('right')"></div>
+    </div>
+-->
+
+</body>
+
+</html>
+
+<script src="jquery.js"></script>
+
+<script src="https://meet.jit.si/external_api.js"></script>
+
+<script src="monscript.js"></script>
+
+<script>
+    var domain = "10.0.2.15";
+    var options = {
+        roomName: "monchat",
+        parentNode: document.querySelector('#meet'),
+        interfaceConfigOverwrite: {
+            TOOLBAR_BUTTONS: ['camera', 'fullscreen'],
+            SHOW_JITSI_WATERMARK: false,
+            SHOW_WATERMARK_FOR_GUESTS: false,
+            filmStripOnly: false,
+            VERTICAL_FILMSTRIP: false,
+            FILM_STRIP_MAX_HEIGHT:"100%",
+            MOBILE_APP_PROMO : false,
+        }
+
+    }
+    var api = new JitsiMeetExternalAPI(domain, options);
+
+    var cssLink = document.createElement("link");
+    cssLink.href = "jitsiExtra.css";
+    cssLink.rel = "stylesheet";
+    cssLink.type = "text/css";
+    frames['frame1'].document.body.appendChild(cssLink);
+    
+    document.getElementById("jitsiConferenceFrame0").head.appendChild(cssLink)
+
+</script>
+
+<link rel="stylesheet" href="jitsiExtra.css">

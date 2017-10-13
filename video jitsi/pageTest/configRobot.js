@@ -1,0 +1,10 @@
+var thisBot = {
+    
+    name : robotSaintEtienne,
+    
+    
+    
+    
+    
+    
+}
