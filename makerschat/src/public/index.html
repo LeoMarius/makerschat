@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello makers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mapControls.css"
+</head>
+
+<body>
+    <!-- <iframe id="apprtc" src="https://appr.tc/r/makerschat" frameborder="0"></iframe> -->
+    <div id="meet"></div>
+    <input type="text">
+
+    <div id="mapControls">
+    <div id="mapZoom">
+        <div id="zoomIn" class="zoom-control" title="Zoom in the view"></div>
+        <div id="zoomOut" class="zoom-control" title="Zoom out the view"></div>
+        <div id="zoomSlider"></div>
+    </div>
+
+    <div id="mapPan">
+        <div class="pan-split" id="panSplitVert"></div>
+        <div class="pan-split" id="panSplitHoriz"></div>
+        <div id="panCentre"></div>
+        <div class="pan-arrow" id="panTop" title="Pan view to the top"></div>
+        <div class="pan-arrow" id="panRight" title="Pan view to the right"></div>
+        <div class="pan-arrow" id="panBottom" title="Pan view to the bottom"></div>
+        <div class="pan-arrow" id="panLeft" title="Pan view to the left"></div>
+    </div>
+</div>
+
+    <script src="jquery.js"></script>
+    <script src="https://meet.jit.si/external_api.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    <script src="myjitsi.js"></script>
+    <script src="mapControls.js"></script>
+</body>
+</html>
